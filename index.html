@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Prata&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equilibra – Simulador de Estrés</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ======= SECCIÓN 1: PORTADA ======= -->
+  <section id="home" class="section active">
+    <div class="home-container">
+      <h1 class="app-title">S3RENUS</h1>
+
+      <blockquote class="quote">
+        “El autocuidado no es un lujo, es una necesidad.”
+      </blockquote> 
+
+      <p class="subtitle">Comprende cómo tus hábitos influyen en tu nivel de estrés.</p>
+      
+      <p class="authors">Developed by: María Jesús Requena Yuraszeck & Fabiana Rennè Riveros Birrueta</strong></p>
+
+    </div>
+  </section>
+
+  <!-- ======= SECCIÓN 2: INTRO ======= -->
+<section id="intro" class="section">
+  <div class="intro-container">
+    
+    <h2 class="section-title">¿Qué es el estrés?</h2>
+
+    <div class="glass-card">
+      <p>
+        El estrés es una respuesta natural del cuerpo frente a desafíos o situaciones demandantes.
+        En niveles moderados puede ayudarte a reaccionar y concentrarte, pero cuando se vuelve 
+        constante, afecta tu salud física, emocional y tus hábitos diarios.
+      </p>
+
+      <p>
+        Esta plataforma te permitirá visualizar cómo tus actividades cotidianas se acumulan 
+        hasta influir en tu bienestar. Con un simulador interactivo, podrás conocer tu nivel 
+        estimado de estrés y recibir recomendaciones personalizadas.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="tabsSection" class="section">
+  <div class="tabs-container">
+    <div class="tabs-menu">
+      <button class="tab-btn active" data-tab="tab1">Descanso</button>
+      <button class="tab-btn" data-tab="tab2">Ejercicio</button>
+      <button class="tab-btn" data-tab="tab3">Alimentación</button>
+      <button class="tab-btn" data-tab="tab4">Pantallas</button>
+      <button class="tab-btn" data-tab="tab5">Carga Académica</button>
+      <button class="tab-btn" data-tab="tab6">Meditación</button>
+    </div>
+
+    <div class="tabs-content">
+      <div class="tab-content active" id="tab1">
+        <h3>Descanso</h3>
+        <p>Dormir lo suficiente es fundamental para que el cerebro y el cuerpo se recuperen del desgaste diario. La falta de sueño afecta la memoria, disminuye la capacidad de concentración y aumenta la irritabilidad, haciendo que las personas sean más vulnerables al estrés. Un buen descanso ayuda a mantener el equilibrio emocional y a enfrentar mejor las situaciones difíciles.</p>
+      </div>
+
+      <div class="tab-content" id="tab2">
+        <h3>Ejercicio</h3>
+        <p>La actividad física regular libera endorfinas, que son hormonas que generan sensación de bienestar. Además, ayuda a reducir la tensión muscular, mejora el ánimo y fortalece la capacidad del cuerpo y la mente para lidiar con situaciones estresantes, disminuyendo la ansiedad y favoreciendo un estado emocional más estable.</p>
+      </div>
+
+      <div class="tab-content" id="tab3">
+        <h3>Alimentación</h3>
+        <p>Consumir grandes cantidades de cafeína o bebidas energéticas puede acelerar el ritmo cardíaco y aumentar la presión arterial, provocando síntomas físicos de estrés y ansiedad. Una alimentación equilibrada, evitando exceso de estimulantes, ayuda a mantener niveles de energía estables y reduce la sensación de agobio.</p>
+      </div>
+
+      <div class="tab-content" id="tab4">
+        <h3>Pantallas y Redes Sociales</h3>
+        <p>El uso excesivo de dispositivos electrónicos y redes sociales puede generar sobreestimulación mental. La exposición constante a información, notificaciones y comparaciones sociales puede aumentar la ansiedad, generar fatiga mental y dificultar la desconexión, lo que eleva los niveles de estrés a lo largo del tiempo.</p>
+      </div>
+
+      <div class="tab-content" id="tab5">
+        <h3>Carga Académica</h3>
+        <p>Tener muchas tareas, exámenes y responsabilidades sin una planificación adecuada genera sensación de presión constante. Esto puede aumentar la ansiedad, la preocupación y la frustración, elevando los niveles de estrés. Organizar el tiempo y establecer prioridades ayuda a manejar mejor la carga académica y a reducir el impacto negativo en la salud mental.</p>
+      </div>
+
+      <div class="tab-content" id="tab6">
+        <h3>Meditación</h3>
+        <p>Practicar la meditación o ejercicios de relajación entrena la mente para enfocarse en el presente y manejar mejor los pensamientos negativos. Esto disminuye la respuesta fisiológica al estrés, como la tensión muscular y el ritmo cardíaco acelerado, promoviendo calma y claridad mental.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Aquí irán las demás secciones (INTRO, HÁBITOS, FORMULARIO, RESULTADOS) -->
+
+<section class="card">
+  <h2>Registro diario</h2>
+  <form id="form">
+    <label>Horas de sueño
+      <input type="number" id="sleep" min="0" max="24" value="7" required>
+    </label>
+
+    <label>Minutos de ejercicio (hoy)
+      <input type="number" id="exercise" min="0" max="300" value="30" required>
+    </label>
+
+    <label>Tazas de café / energía
+      <input type="number" id="coffee" min="0" max="10" value="1" required>
+    </label>
+
+    <label>Horas en pantallas (no estudio)
+      <input type="number" id="screens" min="0" max="24" value="2" required>
+    </label>
+
+    <label>Carga académica (1-10)
+      <input type="number" id="load" min="1" max="10" value="5" required>
+    </label>
+
+    <label>¿Meditaste hoy?
+      <select id="meditation">
+        <option value="no" selected>No</option>
+        <option value="yes">Sí</option>
+      </select>
+    </label>
+
+    <div class="actions">
+      <button type="submit">Calcular y Guardar</button>
+      <button type="button" id="clear">Limpiar datos</button>
+    </div>
+  </form>
+</section>
+
+
+<section class="card" id="resultCard" aria-live="polite">
+  <h2>Resultado</h2>
+  <div id="scoreBox" class="scoreBox">
+    <div id="scoreValue">--</div>
+    <div id="scoreBar" class="scoreBar"><div id="scoreFill"></div></div>
+  </div>
+  <p id="interpretation">Completa el formulario y presiona "Calcular y Guardar".</p>
+  <ul id="adviceList"></ul>
+</section>
+
+
+  <!-- Aquí irán las demás secciones (INTRO, HÁBITOS, FORMULARIO, RESULTADOS) -->
+
+  <!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3 class="footer-title">S3RENUS</h3>
+      <p class="footer-text">
+        El nombre de esta aplicación proviene del término latino 
+        <strong>“Serenus”</strong>, que significa <em>claro, despejado, sin nubes y apacible</em>. 
+        Representa el objetivo central del proyecto: promover claridad mental y equilibrio 
+        a través del reconocimiento de los hábitos que influyen en el estrés.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4 class="footer-subtitle">Participantes</h4>
+      <p class="footer-text">
+        <strong>María Jesús Requena Yuraszeck</strong><br>
+        <strong>Fabiana Rennè Riveros Birrueta</strong><br>
+        Curso: 6° de Secundaria – Exactas y QB<br>
+        Año: 2025
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4 class="footer-subtitle">Compromiso del Proyecto</h4>
+      <p class="footer-text">
+        S3renus es una herramienta educativa diseñada con fines académicos. Su propósito 
+        es fomentar la reflexión personal, la educación emocional y la toma de conciencia 
+        sobre la importancia de los hábitos cotidianos en el bienestar general.
+      </p>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2025 S3renus – Todos los derechos reservados.</p>
+</footer>
+
+  <script src="script.js"></script>
+
+<canvas id="backgroundParticles"></canvas>
+<script src="particles.js"></script>
+
+</body>
+</html>
